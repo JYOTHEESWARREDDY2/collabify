@@ -22,32 +22,18 @@ Thumbs.db
 # Vercel deployment
 .vercel/
 
-# TypeScript
+# Optional: if using TypeScript
 *.tsbuildinfo
 
-# Testing
+# Optional: if using testing tools
 coverage/
 jest-test-results.json
 
-# IDEs
+# Optional: if using IDEs
 .vscode/
 .idea/
 
-# TurboRepo
-turbo/
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
+# Environment variables
 .env
-*.egg-info/
-dist/
-build/
-
-# Alembic
-alembic/versions/*.pyc
+.env.local
+.env.*.local

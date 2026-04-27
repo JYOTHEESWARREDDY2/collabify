@@ -1,91 +1,72 @@
-# Next.js
+# Collabify — The CRM for Creators Who Hustle
 
-A modern Next.js 15 application built with TypeScript and Tailwind CSS.
+Manage brand deals, build media kits, send invoices & get AI-powered rate suggestions — all in one calm workspace.
 
-## 🚀 Features
+## 🚀 Stack
 
-- **Next.js 15** - Latest version with improved performance and features
-- **React 19** - Latest React version with enhanced capabilities
-- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
-
-## 🛠️ Installation
-
-1. Install dependencies:
-  ```bash
-  npm install
-  # or
-  yarn install
-  ```
-
-2. Start the development server:
-  ```bash
-  npm run dev
-  # or
-  yarn dev
-  ```
-3. Open [http://localhost:4028](http://localhost:4028) with your browser to see the result.
+- **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS
+- **Backend**: FastAPI (Python), SQLAlchemy, Alembic
+- **Database**: PostgreSQL
+- **Auth**: JWT
+- **Payments**: Stripe
+- **Storage**: AWS S3
+- **Deploy**: Vercel (frontend) + Railway (backend)
 
 ## 📁 Project Structure
 
 ```
-nextjs/
-├── public/             # Static assets
-├── src/
-│   ├── app/            # App router components
-│   │   ├── layout.tsx  # Root layout component
-│   │   └── page.tsx    # Main page component
-│   ├── components/     # Reusable UI components
-│   ├── styles/         # Global styles and Tailwind configuration
-├── next.config.mjs     # Next.js configuration
-├── package.json        # Project dependencies and scripts
-├── postcss.config.js   # PostCSS configuration
-└── tailwind.config.js  # Tailwind CSS configuration
-
+collabify/
+├── frontend/       # Next.js React app
+├── backend/        # FastAPI Python app
+├── docs/           # Documentation
+├── assets/         # Shared assets
+└── docker-compose.yml
 ```
 
-## 🧩 Page Editing
+## 🛠️ Local Development
 
-You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js 18+
+- Python 3.11+
+- Docker & Docker Compose
+- PostgreSQL (or use Docker)
 
-## 🎨 Styling
+### Start everything with Docker
 
-This project uses Tailwind CSS for styling with the following features:
-- Utility-first approach for rapid development
-- Custom theme configuration
-- Responsive design utilities
-- PostCSS and Autoprefixer integration
+```bash
+docker-compose up
+```
 
-## 📦 Available Scripts
+### Frontend only
 
-- `npm run dev` - Start development server on port 4028
-- `npm run build` - Build the application for production
-- `npm run start` - Start the development server
-- `npm run serve` - Start the production server
-- `npm run lint` - Run ESLint to check code quality
-- `npm run lint:fix` - Fix ESLint issues automatically
-- `npm run format` - Format code with Prettier
+```bash
+cd frontend
+npm install
+npm run dev
+# → http://localhost:4028
+```
 
-## 📱 Deployment
+### Backend only
 
-Build the application for production:
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
+# → http://localhost:8000
+```
 
-  ```bash
-  npm run build
-  ```
+## 📚 Docs
 
-## 📚 Learn More
+- [API Reference](docs/API.md)
+- [Database Schema](docs/DATABASE.md)
+- [Deployment Guide](docs/DEPLOYMENT.md)
+- [Design System](docs/DESIGN_SYSTEM.md)
+- [Troubleshooting](docs/TROUBLESHOOTING.md)
 
-To learn more about Next.js, take a look at the following resources:
+## 🙏 Built with
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial
-
-You can check out the [Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## 🙏 Acknowledgments
-
-- Built with [Rocket.new](https://rocket.new)
-- Powered by Next.js and React
-- Styled with Tailwind CSS
-
-Built with ❤️ on Rocket.new
+- [Next.js](https://nextjs.org)
+- [FastAPI](https://fastapi.tiangolo.com)
+- [Tailwind CSS](https://tailwindcss.com)

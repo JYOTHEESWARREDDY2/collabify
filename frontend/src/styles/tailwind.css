@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@400;600;700&family=Dancing+Script:wght@400..700&display=swap');
+
+@layer base {
+  html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f5f2eb;
+    color: #1b0b2c;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 144, 'SOFT' 0, 'WONK' 1;
+    letter-spacing: -0.02em;
+  }
+
+  .font-caveat {
+    font-family: 'Caveat', cursive;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(27, 11, 44, 0.18);
+    border-radius: 999px;
+    color: #1b0b2c;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 8px 18px;
+    transition: background 0.18s ease, transform 0.18s ease;
+    white-space: nowrap;
+    backdrop-filter: blur(6px);
+  }
+
+  .chip:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: translateY(-1px);
+  }
+
+  .pill-nav {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(2, 44, 34, 0.08);
+    border-radius: 999px;
+  }
+
+  .btn-teal {
+    background: #0d9488;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px -8px rgba(13, 148, 136, 0.45);
+    color: #fff;
+    font-weight: 600;
+    padding: 16px 26px;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-teal:hover {
+    background: #0f766e;
+    box-shadow: 0 12px 24px -8px rgba(13, 148, 136, 0.55);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline-forest {
+    background: transparent;
+    border: 1px solid rgba(2, 44, 34, 0.22);
+    border-radius: 10px;
+    color: #022c22;
+    font-weight: 600;
+    padding: 16px 26px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-outline-forest:hover {
+    background: rgba(2, 44, 34, 0.05);
+    border-color: rgba(2, 44, 34, 0.4);
+  }
+
+  .btn-pink {
+    background: #ec4899;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px -8px rgba(236, 72, 153, 0.45);
+    color: #fff;
+    font-weight: 600;
+    padding: 16px 26px;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-pink:hover {
+    background: #d63384;
+    box-shadow: 0 12px 24px -8px rgba(236, 72, 153, 0.55);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    border: 1px solid rgba(27, 11, 44, 0.25);
+    border-radius: 10px;
+    color: #1b0b2c;
+    font-weight: 600;
+    padding: 16px 26px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-outline:hover {
+    background: rgba(27, 11, 44, 0.05);
+    border-color: rgba(27, 11, 44, 0.45);
+  }
+
+  .price-card {
+    background: #fff;
+    border: 1px solid rgba(27, 11, 44, 0.08);
+    border-radius: 18px;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+  }
+
+  .price-card:hover {
+    box-shadow: 0 30px 60px -20px rgba(27, 11, 44, 0.18);
+    transform: translateY(-4px);
+  }
+
+  .feature-card {
+    background: #fff;
+    border: 1px solid rgba(27, 11, 44, 0.08);
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px -15px rgba(27, 11, 44, 0.15);
+  }
+
+  .kanban-card {
+    background: #fff;
+    border: 1px solid rgba(27, 11, 44, 0.1);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .stage-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+
+  .marquee {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  }
+
+  .marquee-inner {
+    animation: scrollx 35s linear infinite;
+    display: flex;
+    gap: 10px;
+    min-width: max-content;
+  }
+
+  @keyframes scrollx {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .scribble-note {
+    color: #ec4899;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+    transform: rotate(-6deg);
+  }
+
+  .subtle-shadow {
+    box-shadow: 0 20px 50px -15px rgba(27, 11, 44, 0.15);
+  }
+}
